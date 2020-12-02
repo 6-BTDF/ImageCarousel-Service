@@ -33,10 +33,10 @@
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/6-BTDF/reservations-service
+  - https://github.com/6-BTDF/reviews-service
+  - https://github.com/6-BTDF/more-places-proxy
+  - https://github.com/6-BTDF/proxy-placeholder
 
 ## Table of Contents
 
