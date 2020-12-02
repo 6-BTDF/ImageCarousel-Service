@@ -26,10 +26,10 @@
 **Response Object:** HTTP Status Code 200
 
 ## Delete:
-### Method: DELETE\
-### Endpoint: \
-### Request Body: \
-### Response Object: HTTP Status Code 200
+**Method:** DELETE\
+**Endpoint:** \
+**Request Body:** \
+**Response Object:** HTTP Status Code 200
 
 ## Related Projects
 
