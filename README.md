@@ -1,8 +1,36 @@
 # System Design Capstone
 
 > Inherited Project to build & optimize database and server to handle webscale traffic
-  Frontend Owner: Timothy Akana
-  Backend Owner: Harry Clemente
+> Frontend Owner: Timothy Akana
+> Backend Owner: Harry Clemente
+
+
+# Image Carousel
+
+## Create
+> Method: POST
+> Endpoint: 
+> Request Body: 
+> Response Object: HTTP Status Code 201
+
+## Read:
+> Method: GET
+> Endpoint: 
+> Request Body: 
+> Response Object: 
+
+## Update:
+> Method: PUT
+> Endpoint: 
+> Request Body: 
+> Response Object: HTTP Status Code 200
+
+## Delete:
+Method: DELETE
+Endpoint: 
+Request Body: 
+Response Object: HTTP Status Code 200
+
 ## Related Projects
 
   - https://github.com/teamName/repo
@@ -41,28 +69,3 @@ npm install
 ## Style Guide
 Refer to the [AirBnb Style Guide](https://github.com/airbnb/javascript).
 
-Image Carousel
-
-Create
-Method: POST
-Endpoint: 
-Request Body: 
-Response Object: HTTP Status Code 201
-
-Read:
-Method: GET
-Endpoint: 
-Request Body: 
-Response Object: 
-
-Update:
-Method: PUT
-Endpoint: 
-Request Body: 
-Response Object: HTTP Status Code 200
-
-Delete:
-Method: DELETE
-Endpoint: 
-Request Body: 
-Response Object: HTTP Status Code 200
