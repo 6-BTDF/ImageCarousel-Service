@@ -1,34 +1,34 @@
 # System Design Capstone
 
-### Inherited Project to build & optimize database and server to handle webscale traffic
-### Frontend Owner: Timothy Akana
-### Backend Owner: Harry Clemente
+ Inherited Project to build & optimize database and server to handle webscale traffic\
+ Frontend Owner: Timothy Akana\
+ Backend Owner: Harry Clemente
 
 
 # Image Carousel
 
 ## Create
-### Method: POST
-### Endpoint: 
-### Request Body: 
-### Response Object: HTTP Status Code 201
+**Method:** POST\
+**Endpoint:** \
+**Request Body:** \
+**Response Object:** HTTP Status Code 201
 
 ## Read:
-### Method: GET
-### Endpoint: 
-### Request Body: 
-### Response Object: 
+**Method:** GET\
+**Endpoint:** \
+**Request Body:** \
+**Response Object:** 
 
 ## Update:
-### Method: PUT
-### Endpoint: 
-### Request Body: 
-### Response Object: HTTP Status Code 200
+**Method:** PUT\
+**Endpoint:** \
+**Request Body:** \
+**Response Object:** HTTP Status Code 200
 
 ## Delete:
-### Method: DELETE
-### Endpoint: 
-### Request Body: 
+### Method: DELETE\
+### Endpoint: \
+### Request Body: \
 ### Response Object: HTTP Status Code 200
 
 ## Related Projects
