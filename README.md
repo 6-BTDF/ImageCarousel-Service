@@ -8,10 +8,10 @@
 # Image Carousel
 
 ## Create
-**Method:** POST - add a favorite listing\
+**Method:** POST - favorite listing\
 **Endpoint:** '/photo-carousel/favorites/'\
 **Path Params:** listing ID\
-**Request Body:** 
+**Request Body:** JSON
 
 ```JSON
         {
@@ -25,11 +25,16 @@
 **Response [Object]:** HTTP Status Code 201
 
 ## Read:
-**Method:** GET - get photos for listing\
+**Method:** GET - photos for listing\
 **Endpoint:** '/photo-carousel/:id/photos/'\
 **Path Params:** listing ID\
-**Request Body:** { listingId: id }\
-**Response [Object]:** 
+**Request Body:** JSON
+```JSON
+    { 
+      listingId: id 
+    }
+```
+**Response [Object]:** JSON 
 
 ```JSON
     {
@@ -43,10 +48,32 @@
       listingLocation: String,
     }
 ```
+## Read:
+**Method:** GET - user favorites\
+**Endpoint:** '/photo-carousel/:userId/favorites'\
+**Path Params:** user ID\
+**Request Body:** JSON
+```JSON
+    { 
+      userId: userId 
+    }
+```
+**Response [Object]:** JSON
+
+```JSON
+    {
+      _id: Number,
+      userId: Number,
+      listName: String,
+      favoriteLists: Array,
+      favoritePicture: String,
+    }
+```
 
 ## Update:
-**Method:** PUT\
-**Endpoint:** \
+**Method:** PUT - user favorites\
+**Endpoint:** /photo-carousel/favorites\
+**Path Params:** none\
 **Request Body:** \
 **Response Object:** HTTP Status Code 200
 
