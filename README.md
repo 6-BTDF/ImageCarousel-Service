@@ -14,12 +14,12 @@
 **Request Body:** JSON
 
 ```JSON
-        {
-          userId: Number,
-          listName: String,
-          favoriteLists: Array,
-          favoritePicture: String,
-        }
+    {
+      userId: Number,
+      listName: String,
+      favoriteLists: Array,
+      favoritePicture: String,
+    }
 ```
 
 **Response [Object]:** HTTP Status Code 201
@@ -74,14 +74,27 @@
 **Method:** PUT - user favorites\
 **Endpoint:** /photo-carousel/favorites\
 **Path Params:** none\
-**Request Body:** \
-**Response Object:** HTTP Status Code 200
+**Request Body:** JSON
+```JSON
+     {
+       userId: Number,
+       listName: String,
+       favoriteLists: Array,
+     }
+```
+**Response [Object]:** HTTP Status Code 200
 
 ## Delete:
-**Method:** DELETE\
-**Endpoint:** \
-**Request Body:** \
-**Response Object:** HTTP Status Code 200
+**Method:** DELETE - listing\
+**Endpoint:** photo-carousel/:id/photos\
+**Path Params:** listing ID\
+**Request Body:** JSON
+```JSON
+    {
+      listingId: id
+    }
+```
+**Response [Object]:** HTTP Status Code 200
 
 ## Related Projects
 
