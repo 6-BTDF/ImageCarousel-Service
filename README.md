@@ -10,8 +10,9 @@
 ## Create
 **Method:** POST - add a favorite listing\
 **Endpoint:** '/photo-carousel/favorites/'\
-**Path Parameters:** listing id \ 
+**Path Params:** listing ID\
 **Request Body:** 
+
 ```JSON
         {
           userId: Number,
@@ -20,6 +21,7 @@
           favoritePicture: String,
         }
 ```
+
 **Response [Object]:** HTTP Status Code 201
 
 ## Read:
@@ -28,6 +30,7 @@
 **Path Parameters:** listing ID\ 
 **Request Body:** { listingId: id }\
 **Response [Object]:** 
+
 ```JSON
     {
       id: Number,
@@ -40,6 +43,7 @@
       listingLocation: String,
     }
 ```
+
 ## Update:
 **Method:** PUT\
 **Endpoint:** \
