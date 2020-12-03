@@ -27,7 +27,7 @@
 ## Read:
 **Method:** GET - get photos for listing\
 **Endpoint:** '/photo-carousel/:id/photos/'\
-**Path Parameters:** listing ID\ 
+**Path Params:** listing ID\
 **Request Body:** { listingId: id }\
 **Response [Object]:** 
 
