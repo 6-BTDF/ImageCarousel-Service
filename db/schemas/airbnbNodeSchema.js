@@ -136,13 +136,15 @@ function cb() {
   var edgeCollection = db.collection('edges');
   var userCollection = db.collection('users');
   var listingCollection = db.collection('listings');
-  propertyCollection.create().then(
-    () => console.log('Collection created'),
+  propertyCollection.create()
+  .then(
+    () => console.log('Collection created');
     err => console.error('Failed to create collection:', err)
   )
   .then(() => {
-    userCollection.create().then(
-    () => console.log('Collection created'),
+    userCollection.create()
+    .then(
+    () => console.log('Collection created');
     err => console.error('Failed to create collection:', err)
   )
   })
