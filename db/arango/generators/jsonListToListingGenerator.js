@@ -7,7 +7,7 @@ const numStartUserList = 19;
 const numEndUserList = 10;
 const numStartListListing = 9;
 const numEndListListing = 0;
-const fileName = '../data/json/edgeListToListingData.json';
+const fileName = '../json/edgeListToListingData.json';
 const stream = fs.createWriteStream(fileName);
 
 

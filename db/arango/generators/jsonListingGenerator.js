@@ -3,7 +3,7 @@ const faker = require('faker');
 const {argv} = require('yargs');
 
 const numLines = 10000000;
-const fileName = '../data/json/listingDetailsData.json';
+const fileName = '../json/listingDetailsData.json';
 const stream = fs.createWriteStream(fileName);
 
 var numListingDetails = 1000;

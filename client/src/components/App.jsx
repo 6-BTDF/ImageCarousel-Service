@@ -44,20 +44,42 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+
     const id = window.location.pathname.split('/')[1];
+    // console.log(id);
     this.loadListingPhotos(id);
     this.checkFavorite();
   }
 
+  // loadListingPhotos(id) {
+
+  //   axios.get(`/api/photo-carousel/${id}/photos`)
+  //     .then((results) => {
+  //       console.log(results);
+  //       this.setState({
+  //         carouselPhotos: results.data,
+  //         listingName: results.data[0].listingName,
+  //         listingStars: results.data[0].listingStars,
+  //         listingNumReviews: results.data[0].listingNumReviews,
+  //         listingLocation: results.data[0].listingLocation,
+  //       });
+  //     })
+  //     .catch((error) => {
+  //       console.error(error);
+  //     });
+  // }
+
   loadListingPhotos(id) {
+
     axios.get(`/api/photo-carousel/${id}/photos`)
       .then((results) => {
+        // console.log(results);
         this.setState({
-          carouselPhotos: results.data,
-          listingName: results.data[0].listingName,
-          listingStars: results.data[0].listingStars,
-          listingNumReviews: results.data[0].listingNumReviews,
-          listingLocation: results.data[0].listingLocation,
+          carouselPhotos: results.data.photos,
+          listingName: results.data.listing_name,
+          listingStars: results.data.listing_stars,
+          listingNumReviews: results.data.listing_num_reviews,
+          listingLocation: results.data.listing_location,
         });
       })
       .catch((error) => {
@@ -178,24 +200,24 @@ class App extends React.Component {
   }
 
   checkFavorite() {
-    axios.get('/api/photo-carousel/favorites/1')
-      .then((results) => {
-        let isFavorite = false;
-        const favorites = results.data;
-        for (let i = 0; i < favorites.length; i += 1) {
-          favorites[i].favoriteLists.forEach((fav) => {
-            if (fav === Number(window.location.pathname.split('/')[1])) {
-              isFavorite = true;
-            }
-          });
-        }
-        this.setState({
-          isFavorite,
-        });
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+    // axios.get('/api/photo-carousel/favorites/1564')
+    //   .then((results) => {
+    //     let isFavorite = false;
+    //     const favorites = results.data;
+    //     for (let i = 0; i < favorites.length; i += 1) {
+    //       favorites[i].favoriteLists.forEach((fav) => {
+    //         if (fav === Number(window.location.pathname.split('/')[1])) {
+    //           isFavorite = true;
+    //         }
+    //       });
+    //     }
+    //     this.setState({
+    //       isFavorite,
+    //     });
+    //   })
+    //   .catch((error) => {
+    //     console.error(error);
+    //   });
   }
 
   render() {
@@ -214,6 +236,7 @@ class App extends React.Component {
       isChanging,
       isClosing,
     } = this.state;
+    // console.log(this.state);
 
     (this.state.showFavorites || this.state.showMosaic || this.state.showCarousel) ? document.body.style.overflowY = 'hidden' : document.body.style.overflowY = 'scroll';
 
@@ -229,6 +252,7 @@ class App extends React.Component {
           isFavorite={isFavorite}
         />
         <Gallery
+
           carouselPhotos={carouselPhotos}
           toggleCarousel={this.toggleCarousel}
           height={100}
@@ -240,7 +264,7 @@ class App extends React.Component {
         </ShowAllPhotos>
         {showFavorites && <Favorites
           toggleFavorites={this.toggleFavorites}
-          mainPic={carouselPhotos[0].photo}
+          mainPic={carouselPhotos[0]}
           checkFavorite={this.checkFavorite}
           isFavoriteClosing={isFavoriteClosing}
         />}

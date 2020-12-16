@@ -9,31 +9,31 @@ const generateMosaicChunks = (photos, switchCarouselMosaic) => {
   while (photoCopies.length > 0) {
     const chunk = [];
     if (photoCopies.length === 5) {
-      chunk.push(<LargePhoto src={photoCopies.shift().photo} key={index} id={index} onClick={switchCarouselMosaic} />);
+      chunk.push(<LargePhoto src={photoCopies.shift()} key={index} id={index} onClick={switchCarouselMosaic} />);
       index += 1;
-      chunk.push(<SmallPhoto src={photoCopies.shift().photo} key={index} id={index} onClick={switchCarouselMosaic} />);
+      chunk.push(<SmallPhoto src={photoCopies.shift()} key={index} id={index} onClick={switchCarouselMosaic} />);
       index += 1;
-      chunk.push(<SmallPhoto src={photoCopies.shift().photo} key={index} id={index} onClick={switchCarouselMosaic} />);
+      chunk.push(<SmallPhoto src={photoCopies.shift()} key={index} id={index} onClick={switchCarouselMosaic} />);
       index += 1;
-      chunk.push(<SmallPhoto src={photoCopies.shift().photo} key={index} id={index} onClick={switchCarouselMosaic} />);
+      chunk.push(<SmallPhoto src={photoCopies.shift()} key={index} id={index} onClick={switchCarouselMosaic} />);
       index += 1;
-      chunk.push(<SmallPhoto src={photoCopies.shift().photo} key={index} id={index} onClick={switchCarouselMosaic} />);
+      chunk.push(<SmallPhoto src={photoCopies.shift()} key={index} id={index} onClick={switchCarouselMosaic} />);
       index += 1;
     } else if (photoCopies.length === 4) {
-      chunk.push(<SmallPhoto src={photoCopies.shift().photo} key={index} id={index} onClick={switchCarouselMosaic} />);
+      chunk.push(<SmallPhoto src={photoCopies.shift()} key={index} id={index} onClick={switchCarouselMosaic} />);
       index += 1;
-      chunk.push(<SmallPhoto src={photoCopies.shift().photo} key={index} id={index} onClick={switchCarouselMosaic} />);
+      chunk.push(<SmallPhoto src={photoCopies.shift()} key={index} id={index} onClick={switchCarouselMosaic} />);
       index += 1;
-      chunk.push(<SmallPhoto src={photoCopies.shift().photo} key={index} id={index} onClick={switchCarouselMosaic} />);
+      chunk.push(<SmallPhoto src={photoCopies.shift()} key={index} id={index} onClick={switchCarouselMosaic} />);
       index += 1;
-      chunk.push(<SmallPhoto src={photoCopies.shift().photo} key={index} id={index} onClick={switchCarouselMosaic} />);
+      chunk.push(<SmallPhoto src={photoCopies.shift()} key={index} id={index} onClick={switchCarouselMosaic} />);
       index += 1;
     } else {
-      chunk.push(<LargePhoto src={photoCopies.shift().photo} key={index} id={index} onClick={switchCarouselMosaic} />);
+      chunk.push(<LargePhoto src={photoCopies.shift()} key={index} id={index} onClick={switchCarouselMosaic} />);
       index += 1;
-      chunk.push(<SmallPhoto src={photoCopies.shift().photo} key={index} id={index} onClick={switchCarouselMosaic} />);
+      chunk.push(<SmallPhoto src={photoCopies.shift()} key={index} id={index} onClick={switchCarouselMosaic} />);
       index += 1;
-      chunk.push(<SmallPhoto src={photoCopies.shift().photo} key={index} id={index} onClick={switchCarouselMosaic} />);
+      chunk.push(<SmallPhoto src={photoCopies.shift()} key={index} id={index} onClick={switchCarouselMosaic} />);
       index += 1;
     }
     mosaic = [...mosaic, ...chunk];

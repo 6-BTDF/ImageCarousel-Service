@@ -5,8 +5,9 @@ import styled from 'styled-components';
 const Gallery = ({ carouselPhotos, toggleCarousel }) => (
   <div>
     <GalleryStyled>
+      {/* {console.log(carouselPhotos)} */}
       {carouselPhotos.map((image, index) =>
-        <Photo src={image.photo} key={image.id} id={index} onClick={toggleCarousel} />)}
+        <Photo src={image} key={index} id={index} onClick={toggleCarousel} />)}
     </GalleryStyled>
   </div>
 );

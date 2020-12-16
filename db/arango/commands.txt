@@ -1,0 +1,20 @@
+db.listToListingsEdges.ensureIndex({ type: "persistent", fields: [ "_to", "_from" ] });
+
+db.userToListsEdges.ensureIndex({ type: "persistent", fields: [ "_to", "_from" ] });
+
+db._profileQuery(` for doc in favorite_lists filter doc._key == "3547776" for v,e,p in 1..2 outbound doc listToListingsEdges limit 50 return e._to `, {}, {colors: false} );
+
+db._profileQuery(` for doc in listings
+filter doc._key == "9722776"
+for v,e,p in 1..2 outbound doc listToListingsEdges
+limit 50
+return v.photos `, {}, {colors: false} );
+
+db._profileQuery(` for doc in users filter doc._key == "35476" for v,e,p in 1..2 outbound doc userToListsEdges limit 50 return v.photos `, {}, {colors: false} );
+
+db._profileQuery(`
+for doc in listings
+filter doc._key == "3547776"
+limit 50 return doc `, {}, {colors: false} );
+
+ /usr/local/sbin/arangod

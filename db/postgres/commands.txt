@@ -1,0 +1,25 @@
+# Seed Command for PostgreSQL
+
+SET search_path TO stayio;
+COPY stayio.listing_details(listingName, listingDescription, listingLocation, listingStars, listingNumReviews, photos)
+FROM 'filepath'
+WITH (DELIMITER',', FORMAT CSV, HEADER true);
+
+SET search_path TO airbnb;
+COPY airbnb.users(user_id, first_name, last_name, email)
+FROM '/Users/harryclemente/dev/hackreactor/SDC/ImageCarousel-Service/db/postgres/psqlUsersData.csv'
+WITH (DELIMITER',', FORMAT CSV, HEADER true);
+
+SET search_path TO airbnb;
+COPY airbnb.listing_details(listing_details_id, user_id, listing_name, listing_description, listing_location, listing_num_reviews, listing_stars, guests, bedrooms, baths, weekday_rate, weekend_event_rate, photos, fav_pic)
+FROM '/Users/harryclemente/dev/hackreactor/SDC/ImageCarousel-Service/db/postgres/psqlListingsData.csv'
+WITH (DELIMITER',', FORMAT CSV, HEADER true);
+
+SET search_path TO airbnb;
+COPY airbnb.favorite_list(favorite_list_id, list_name, listing_details_id, user_id)
+FROM '/Users/harryclemente/dev/hackreactor/SDC/ImageCarousel-Service/db/postgres/psqlFavoriteListData.csv'
+WITH (DELIMITER',', FORMAT CSV, HEADER true);
+
+CREATE INDEX ON airbnb.favorite_list (listing_details_id);
+
+SELECT pg_size_pretty( pg_database_size('sdc') );

@@ -104,7 +104,7 @@ class Favorites extends React.Component {
       const listingId = Number(window.location.pathname.split('/')[1]);
       let isOnFavoritesList = false;
       for (let i = 0; i < favoriteList.length; i += 1) {
-        if (favoriteList[i] === listingId) {
+        if (favoriteList[i].split('/')[1] === listingId) {
           isOnFavoritesList = true;
         }
       }
