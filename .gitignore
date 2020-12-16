@@ -30,3 +30,6 @@ photoCarousel.pem
 #JSON and CSV files
 *.csv
 *.json
+
+#New Relic
+newrelic.js
